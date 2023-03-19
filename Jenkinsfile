@@ -9,7 +9,7 @@ pipeline{
     stages{  
        stage('1. Git Clone'){  
            steps{  
-               git branch: 'main', url: 'https://github.com/Majormekzy/ABC_Technologies.git'  
+               git branch: 'main', url: 'https://github.com/Majormekzy/abc_technologies.git'  
            }  
        }   
        stage('2. Compile SRC'){  
