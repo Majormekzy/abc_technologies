@@ -1,0 +1,23 @@
+---
+
+- hosts: localhost
+
+  gather_facts: false
+
+  tasks:
+
+    - name: Copy Kubernetes deployment file
+
+      copy:
+
+        src: /var/lib/jenkins/workspace/abc_technologies/deployment.yml
+
+        dest: /tmp/
+
+    - name: Apply Kubernetes deployment
+
+      become: true
+
+      become_user: root
+
+      command: kubectl apply -f /tmp/deployment.yml
