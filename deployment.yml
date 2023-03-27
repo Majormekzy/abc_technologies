@@ -39,3 +39,16 @@ spec:
         ports:
 
         - containerPort: 80
+---
+kind: Service
+apiVersion: v1
+metadata:
+    name: abc-tech-app-services
+spec:
+    type: NodePort
+    selector:
+        app: abc-tech-app
+    ports:
+        - port: 80 #cluster port
+          targetPort: 80 #container image port
+          nodePort: 30080
