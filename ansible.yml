@@ -1,6 +1,6 @@
 ---
 
-- hosts: localhost
+- hosts: webservers
 
   gather_facts: false
 
