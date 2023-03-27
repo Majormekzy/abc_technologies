@@ -41,5 +41,10 @@ pipeline{
         sh "docker push majormekzy/abc_technologies:latest" 
         } 
     }
+        stage("8. execute ansible"){
+            steps {
+            ansiblePlaybook credentialsId: 'ansible_key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'dev.inv', playbook: 'ansible.yml'
+            }
+        }
     }
 }
