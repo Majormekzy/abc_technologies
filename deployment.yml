@@ -50,5 +50,5 @@ spec:
         app: abc-tech-pro
     ports:
         - port: 80 #cluster port
-          targetPort: 80 #container image port
+          targetPort: 8080 #container image port
           nodePort: 32000
